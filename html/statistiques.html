@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="/styles/general/style.css" rel="stylesheet">
+    <link href="/styles/general/animation.css" rel="stylesheet">
+    <link href="/styles/statistiques.css" rel="stylesheet">
+    <link href="/styles/general/tableau.css" rel="stylesheet">
+    <title>Statistiques</title>
+    <script defer src="/scripts/dataReaderS.js" ></script>
+    <script defer src="/scripts/tri.js" ></script>
+    <script defer src="/scripts/rechercheS.js" ></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="icon-nav" href="index.html">
+                <span class="material-symbols-outlined" alt="nom projet">directions_bike <em>bike</em></span>
+            </a>
+            <div class="nav-liens">
+                <a href="itineraire.html">Itinéraire</a>
+                <a id="active" href="statistiques.html">Statistiques</a>
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="location.href='pointsInterets.html'">Points d'intérêt
+                         <i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-contenu">
+                        <a href="#lien1">Lien 1</a>
+                        <a href="#lien2">Lien 2</a>
+                        <a href="#lien3">Lien 3</a>
+                    </div>
+                </div>
+            </div>
+            <a class="icon-nav"><span class="material-symbols-outlined">account_circle</span></a>
+        </nav>
+    </header>
+
+    <div id="page-container">
+        <main>
+            <section class="params-tableau">
+                <section class="info-page">
+                    <h1>Statistiques</h1>
+                    <p>Le réseau cyclable de montréal est composé de X pistes et voies cyclables.</p>
+                </section>
+                <section class="compteur-date">
+                    <h3>Compteurs implantés à partir de :</h3>
+                    <label>
+                        <input type="date" name="date" placeholder="Pick date" required>
+                    </label>
+                </section>
+                <section class="recherche-compteur">
+                    <h3>Recherche de compteur</h3>
+                    <div class="search">
+                        <div>
+                            <label>
+                                <input id="searchBar" onclick="recherche()" type="search" name="search" placeholder="Description...">
+                                <!-- <input type="submit" name="submit" value="O"> -->
+                                <span id="searchBtn" class="material-symbols-outlined">search</span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="cote-droit">
+                <section class="boutons">
+                    <a href="#">Liste des capteurs</a>
+                    <a href="#">Carte</a>
+                </section>
+                <section class="tableau">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th onclick="sortTable()">Identifiant</th>
+                                <th onclick="sortTable()">Nom du compteur</th>
+                                <th onclick="sortTable()">Statut</th>
+                                <th onclick="sortTable()">Année d'implantation</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donnees"></tbody>
+                    </table>
+                </section>
+            </section>
+        </main>
+        <footer>
+            <div class="socials">
+                <a target="_blank" href="https://twitter.com/" >
+                    <img src="/images/twitter.svg" alt="Logo Twitter">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/" >
+                    <img src="/images/instagram.svg" alt="Logo Instagram">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/" >
+                    <img src="/images/facebook-f.svg" alt="Logo Facebook">
+                </a>
+            </div>
+            <p>@ 2023, GTI525 Groupe 01 - Équipe 10</p>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+main {
+    display: flex;
+    /* border: magenta solid 2px; */
+    /* margin: 0; */
+}
+
+.params-carte {
+    margin: 0 1em 2em 3em;
+    animation: deLaGauche .5s;
+    /* border: red solid; */
+}
+
+/* Inside main */
+.info-page {
+    height: 100px;
+    width: 350px;
+    /* border: magenta solid 2px; */
+}
+
+.info-page h1 {
+    padding-bottom: 15px;
+}
+
+
+
+/* Début réseaux --------------------------------------------------*/
+.reseaux {
+    padding: 50px 0 30px 0;
+    height: 95px;
+    /* border: red solid 2px; */
+}
+
+/* Source: https://uiverse.io/Pradeepsaranbishnoi/slimy-warthog-37 */
+    .choix-reseau div {
+        display: flex;
+        /* flex-wrap: wrap; */
+        /* margin-top: 0.5rem; */
+        /* justify-content: center; */
+    }
+
+    .choix-reseau input[type="radio"] {
+        clip: rect(0 0 0 0);
+        position: absolute;
+    }
+
+    .choix-reseau input[type="radio"]:checked+span {
+        box-shadow: 0 0 0 0.0625em var(--vert-fonce);
+        background-color: var(--vert-fonce);
+        color: white;
+        letter-spacing: 1px;
+    }
+
+    .choix-reseau label span {
+        display: block;
+        cursor: pointer;
+        /* background-color: #fff; */
+        padding: 0.375em 1.25em;
+        position: relative;
+        margin-left: .0625em;
+        box-shadow: 0 0 0 0.0625em #b5bfd9;
+        letter-spacing: .05em;
+        color: #3e4963;
+        text-align: center;
+        transition: background-color 110ms ease;
+    }
+
+    .choix-reseau label:first-child span {
+        border-radius: 1em 0 0 1em;
+    }
+
+    .choix-reseau label:last-child span {
+        border-radius: 0 1em 1em 0;
+    }
+/* Fin réseaux -----------------------------------------------------*/
+
+
+
+/* Début voies -------------------------------*/
+.type-voie {
+    /* height: 95px; */
+    /* border: blue solid 2px; */
+    margin-bottom: 40px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input.option-input {
+        vertical-align: text-top;
+        /* position: relative;
+        top: 4px; */
+        height: 24px;
+        width: 20px;
+        margin: 0 0.5rem 0.5rem 0;
+    }
+/* Début voies ------------------------------*/
+
+
+
+/* Début dates ------------------------------*/
+.datePopPeriode {
+    height: 200px;
+    width: 100%;
+    /* border: green solid 2px; */
+}
+
+.dates label span{
+        margin-right: 10px;
+    }
+
+    input[type="date"] {
+        width: 70%;
+    }
+    .dates label {
+        padding-bottom: 7px;
+    }
+    #a span{
+        margin-right: 21px;
+        text-align: center;
+    }
+/* Fin dates -----------------------------*/
+
+
+/* ANIMATIONS */
+.params-carte section:nth-child(1) {animation: deLaGauche .2s;}
+.params-carte section:nth-child(2) {animation: deLaGauche .4s;}
+.params-carte section:nth-child(3) {animation: deLaGauche .6s;}
+.params-carte section:nth-child(4) {animation: deLaGauche .75s;}
+
+
+.carte {
+    /* border: rgb(150, 0, 150) solid 2px; */
+    width: 100%;
+    height: 100%;
+    margin: 1em 2em 0 0;
+}
+
+.google-map {
+    padding-bottom: 48%;
+    position: relative;
+    animation: zoomIn 1s;
+}
+
+.google-map iframe {
+    border-radius: 10px;
+    height: 100%;
+    min-height: 750px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
